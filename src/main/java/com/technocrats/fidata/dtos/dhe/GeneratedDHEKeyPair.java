@@ -10,9 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class GeneratedDHEKeyPair {
 
-
     @JsonProperty(value = "KeyMaterial")
-    private com.technocrats.fidata.dtos.dhe.KeyMaterial KeyMaterial;
+    private KeyMaterial KeyMaterial;
 
     private ErrorInfo errorInfo;
 

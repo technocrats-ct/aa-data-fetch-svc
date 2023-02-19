@@ -1,9 +1,8 @@
 package com.technocrats.fidata.utils;
 
-
 import org.apache.commons.codec.binary.Base64;
 
-import java.security.SecureRandom;
+import java.util.Random;
 
 public class EncodeDecodeUtils {
 
@@ -15,17 +14,16 @@ public class EncodeDecodeUtils {
         return new String(new Base64().decode(data.getBytes()));
     }
 
-    public static String generateRandomNonce() {
-        byte[] nonce = new byte[32];
-        new SecureRandom().nextBytes(nonce);
-        return convertBytesToHex(nonce);
+    public static String getRandomNonce(int length) {
+        StringBuffer buffer = new StringBuffer("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ");
+        StringBuffer sb = new StringBuffer();
+        Random r = new Random();
+        int range = buffer.length();
+        for (int i = 0; i < length-1; i++) {
+            sb.append(buffer.charAt(r.nextInt(range)));
+        }
+        sb.append("=");
+        return sb.toString();
     }
 
-    private static String convertBytesToHex(byte[] bytes) {
-        StringBuilder result = new StringBuilder();
-        for (byte temp : bytes) {
-            result.append(String.format("%02x", temp));
-        }
-        return result.toString();
-    }
 }

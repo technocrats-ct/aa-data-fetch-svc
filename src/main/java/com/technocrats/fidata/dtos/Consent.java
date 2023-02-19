@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Consent {
+
     private String id;
+
     private String digitalSignature;
 }

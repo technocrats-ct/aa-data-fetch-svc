@@ -12,8 +12,16 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class KeyMaterial {
+
+    @JsonProperty(value = "DHPublicKey")
+    private DHPublicKey DHPublicKey;
+
+    private String cryptoAlg;
+
+    private String curve;
+
+    private String params;
 
     @Data
     @AllArgsConstructor
@@ -29,15 +37,4 @@ public class KeyMaterial {
         @JsonProperty(value = "KeyValue")
         private String KeyValue;
     }
-
-    @JsonProperty(value = "DHPublicKey")
-    DHPublicKey DHPublicKey;
-
-    private String cryptoAlg;
-
-    private String curve;
-
-    private String params;
-
-
 }

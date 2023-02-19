@@ -5,11 +5,8 @@ import lombok.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class KeyMaterialWithNonce extends KeyMaterial {
-
-    public KeyMaterialWithNonce(){
-
-    }
 
     public KeyMaterialWithNonce(KeyMaterial.DHPublicKey DHPublicKey, String cryptoAlg, String curve, String params, String nonce) {
         super(DHPublicKey, cryptoAlg, curve, params);
@@ -17,7 +14,7 @@ public class KeyMaterialWithNonce extends KeyMaterial {
     }
 
     public KeyMaterialWithNonce(KeyMaterial material, String nonce) {
-       this(material.getDHPublicKey(), material.getCryptoAlg(), material.getCurve(), material.getParams(), nonce);
+        this(material.getDHPublicKey(), material.getCryptoAlg(), material.getCurve(), material.getParams(), nonce);
     }
 
     @JsonProperty(value = "Nonce")

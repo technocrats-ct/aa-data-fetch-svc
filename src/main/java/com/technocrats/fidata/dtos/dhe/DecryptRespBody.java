@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 public class DecryptRespBody {
 
     private String base64Data;
+
     private ErrorInfo errorInfo;
 
 }

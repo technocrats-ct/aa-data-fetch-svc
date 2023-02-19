@@ -7,21 +7,21 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration;
 import org.springframework.boot.context.event.ApplicationStartedEvent;
 import org.springframework.context.event.EventListener;
+import org.springframework.data.mongodb.core.MongoTemplate;
 
 @SpringBootApplication(exclude = {WebFluxAutoConfiguration.class})
 public class AaDataFetchSvcApplication {
 
     @Autowired
-    AaSvc aaSvc;
+    MongoTemplate mongoTemplate;
 
     public static void main(String[] args) {
         SpringApplication.run(AaDataFetchSvcApplication.class, args);
     }
 
 
-//    @EventListener(ApplicationStartedEvent.class)
-//    public void checkAA(){
-//        System.out.println(System.getProperty("CLIENT_API_KEY"));
-//        System.out.println(aaSvc.checkHeartBeat());
-//    }
+    @EventListener(ApplicationStartedEvent.class)
+    public void doSome(){
+        System.out.println(mongoTemplate.getCollectionNames());
+    }
 }

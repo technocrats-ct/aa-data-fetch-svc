@@ -8,11 +8,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FiDataReq {
+public class ConsentDetailDTO {
 
     @JsonProperty(value = "Consent")
     private Consent Consent;
 
     @JsonProperty(value = "FIDataRange")
-    private FIDataRange FIDataRange;
+    private FIDataRangeDTO FIDataRangeDTO;
+
 }

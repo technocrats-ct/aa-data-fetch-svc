@@ -9,7 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FIData {
+
     private String linkRefNumber;
+
     private String maskedAccNumber;
+
     private String encryptedFI;
 }

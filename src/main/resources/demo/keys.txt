@@ -1,0 +1,8 @@
+GeneratedDHEKeyPair(
+KeyMaterial=KeyMaterial
+    (DHPublicKey=KeyMaterial.DHPublicKey(expiry=Thu Feb 16 09:48:35 UTC 2023,
+    Parameters=,
+     KeyValue=-----BEGIN PUBLIC KEY-----MIIBMTCB6gYHKoZIzj0CATCB3gIBATArBgcqhkjOPQEBAiB/////////////////////////////////////////7TBEBCAqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqYSRShRAQge0Je0Je0Je0Je0Je0Je0Je0Je0Je0Je0JgtenHcQyGQEQQQqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq0kWiCuGaG4oIa04B7dLHdI0UySPU1+bXxhsinpxaJ+ztPZAiAQAAAAAAAAAAAAAAAAAAAAFN753qL3nNZYEmMaXPXT7QIBCANCAAQczUUytbyz96J4XYJXE8UAl9q9KIHLzaDhVA0Yv3karDCyDcphk7fuMZJaEtLRIMA8CGoeN0JJHC7BmGZ/dmBj-----END PUBLIC KEY-----),
+     cryptoAlg=ECDH, curve=Curve25519, params=),
+      errorInfo=null,
+      privateKey=-----BEGIN PRIVATE KEY-----MIICRwIBADCB6gYHKoZIzj0CATCB3gIBATArBgcqhkjOPQEBAiB/////////////////////////////////////////7TBEBCAqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqYSRShRAQge0Je0Je0Je0Je0Je0Je0Je0Je0Je0Je0JgtenHcQyGQEQQQqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq0kWiCuGaG4oIa04B7dLHdI0UySPU1+bXxhsinpxaJ+ztPZAiAQAAAAAAAAAAAAAAAAAAAAFN753qL3nNZYEmMaXPXT7QIBCASCAVMwggFPAgEBBCABTMGLs/gzxj/HA0Bp3yUnzCNzz6slhw8+vs+613tp0KCB4TCB3gIBATArBgcqhkjOPQEBAiB/////////////////////////////////////////7TBEBCAqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqYSRShRAQge0Je0Je0Je0Je0Je0Je0Je0Je0Je0Je0JgtenHcQyGQEQQQqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq0kWiCuGaG4oIa04B7dLHdI0UySPU1+bXxhsinpxaJ+ztPZAiAQAAAAAAAAAAAAAAAAAAAAFN753qL3nNZYEmMaXPXT7QIBCKFEA0IABBzNRTK1vLP3onhdglcTxQCX2r0ogcvNoOFUDRi/eRqsMLINymGTt+4xkloS0tEgwDwIah43QkkcLsGYZn92YGM=-----END PRIVATE KEY-----)
