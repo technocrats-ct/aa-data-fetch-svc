@@ -1,6 +1,7 @@
 package com.technocrats.fidata.controller;
 
 import com.technocrats.fidata.dtos.ConsentDetailDTO;
+import com.technocrats.fidata.dtos.FiDataFetchResponse;
 import com.technocrats.fidata.services.FIService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,11 +17,9 @@ public class FIController {
     private final FIService fiService;
 
     @PostMapping(value = "/fetchData")
-    public String fetchFIDataForConsent(@RequestBody ConsentDetailDTO consentDetail) {
+    public FiDataFetchResponse fetchFIDataForConsent(@RequestBody ConsentDetailDTO consentDetail) {
         log.info("Consent Detail Received: {}", consentDetail);
-        String fiData = fiService.fetchFIDataForConsent(consentDetail);
-        log.info("FI Data For The Consent: {}", fiData);
-        return fiData;
+        return fiService.fetchFIDataForConsent(consentDetail);
     }
 
 }
