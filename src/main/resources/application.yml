@@ -4,4 +4,4 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://fiu_aa_testing:fiu_aa_testing@ac-nuojl4c-shard-00-00.obch3ej.mongodb.net:27017,ac-nuojl4c-shard-00-01.obch3ej.mongodb.net:27017,ac-nuojl4c-shard-00-02.obch3ej.mongodb.net:27017/test?ssl=true&authSource=admin&retryWrites=true
+      uri: mongodb://${user}:${pwd}@ac-nuojl4c-shard-00-00.obch3ej.mongodb.net:27017,ac-nuojl4c-shard-00-01.obch3ej.mongodb.net:27017,ac-nuojl4c-shard-00-02.obch3ej.mongodb.net:27017/AccAggDB?ssl=true&authSource=admin&retryWrites=true

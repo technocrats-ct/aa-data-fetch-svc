@@ -15,4 +15,6 @@ public class FIData {
     private String maskedAccNumber;
 
     private String encryptedFI;
+
+    private String decryptedFI;
 }

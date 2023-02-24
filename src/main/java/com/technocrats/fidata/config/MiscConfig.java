@@ -10,7 +10,7 @@ import java.util.TimeZone;
 public class MiscConfig {
 
     @Autowired
-    public void configureTimeZone(ObjectMapper objectMapper){
+    public void configureTimeZone(ObjectMapper objectMapper) {
         objectMapper.setTimeZone(TimeZone.getTimeZone("UTC"));
     }
 }

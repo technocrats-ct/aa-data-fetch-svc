@@ -1,7 +1,9 @@
 package com.technocrats.fidata.services.rules;
 
+import com.technocrats.fidata.dtos.FiDataFetchResponse;
+
 public interface IProcessFiDataRequest {
 
     Integer getExecutionSeq();
-    void chain();
+    boolean chain(FiDataFetchResponse fiDataFetchResponse);
 }
