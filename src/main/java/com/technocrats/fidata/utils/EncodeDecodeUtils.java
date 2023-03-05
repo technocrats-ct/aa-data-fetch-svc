@@ -19,7 +19,7 @@ public class EncodeDecodeUtils {
         StringBuffer sb = new StringBuffer();
         Random r = new Random();
         int range = buffer.length();
-        for (int i = 0; i < length-1; i++) {
+        for (int i = 0; i < length - 1; i++) {
             sb.append(buffer.charAt(r.nextInt(range)));
         }
         sb.append("=");

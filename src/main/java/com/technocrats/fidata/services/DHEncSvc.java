@@ -1,9 +1,9 @@
 package com.technocrats.fidata.services;
 
 import com.technocrats.fidata.constants.AaConstants;
-import com.technocrats.fidata.dtos.dhe.DecryptReqBody;
-import com.technocrats.fidata.dtos.dhe.DecryptRespBody;
-import com.technocrats.fidata.dtos.dhe.GeneratedDHEKeyPair;
+import com.technocrats.fidata.dtos.DecryptReqBody;
+import com.technocrats.fidata.dtos.DecryptRespBody;
+import com.technocrats.fidata.dtos.GeneratedDHEKeyPair;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -16,23 +16,20 @@ public class DHEncSvc {
     private final WebClient webClientDHE;
 
     public GeneratedDHEKeyPair generateKey() {
-        GeneratedDHEKeyPair localDHEKeyPair = webClientDHE.get()
+        return webClientDHE.get()
                 .uri(AaConstants.RAHASYA_KEYGEN_ECC_URI)
                 .retrieve()
                 .bodyToMono(GeneratedDHEKeyPair.class)
                 .block();
-        return localDHEKeyPair;
     }
 
     public DecryptRespBody decryptData(DecryptReqBody decryptReqBody) {
-
-        DecryptRespBody response = webClientDHE.post()
-                .uri(AaConstants.RAHASYA_KEYGEN_DECRYPT_URI)
+        return webClientDHE.post()
+                .uri(AaConstants.RAHASYA_DECRYPT_ECC_URI)
                 .body(Mono.just(decryptReqBody), DecryptReqBody.class)
                 .retrieve()
                 .bodyToMono(DecryptRespBody.class)
                 .block();
-        return response;
     }
 
 

@@ -1,0 +1,286 @@
+{
+  "data": {
+    "gstin": "29HJKPS9689A8Z4",
+    "tx_pmt": {
+      "pditc": {
+        "c_pdc": 2290459,
+        "c_pdi": 3517817,
+        "i_pdc": 2290459,
+        "i_pdi": 3517817,
+        "i_pds": 2290459,
+        "s_pdi": 3517817,
+        "s_pds": 2290459,
+        "cs_pdcs": 2290459,
+        "trans_typ": 30002,
+        "liab_ldg_id": 12321
+      },
+      "tx_py": [
+        {
+          "cess": {
+            "tx": 100,
+            "intr": 100
+          },
+          "cgst": {
+            "tx": 100,
+            "fee": 100,
+            "intr": 100
+          },
+          "igst": {
+            "tx": 100,
+            "intr": 100
+          },
+          "sgst": {
+            "tx": 100,
+            "fee": 100,
+            "intr": 100
+          },
+          "trans_typ": 30002,
+          "trans_desc": "Other than reverse charge",
+          "liab_ldg_id": 11191
+        },
+        {
+          "cess": {
+            "tx": 100,
+            "intr": 100
+          },
+          "cgst": {
+            "tx": 100,
+            "fee": 100,
+            "intr": 100
+          },
+          "igst": {
+            "tx": 100,
+            "intr": 100
+          },
+          "sgst": {
+            "tx": 100,
+            "fee": 100,
+            "intr": 100
+          },
+          "trans_typ": 30003,
+          "trans_desc": "Reverse charge",
+          "liab_ldg_id": 11191
+        }
+      ],
+      "pdcash": [
+        {
+          "cpd": 3517817,
+          "ipd": 3517817,
+          "spd": 3517817,
+          "cspd": 3517817,
+          "c_intrpd": 30,
+          "c_lfeepd": 13,
+          "i_intrpd": 20,
+          "s_intrpd": 10,
+          "s_lfeepd": 13,
+          "cs_intrpd": 15,
+          "trans_typ": 30002,
+          "liab_ldg_id": 1233
+        },
+        {
+          "cpd": 3517817,
+          "ipd": 3517817,
+          "spd": 3517817,
+          "cspd": 3517817,
+          "c_intrpd": 30,
+          "c_lfeepd": 13,
+          "i_intrpd": 20,
+          "s_intrpd": 10,
+          "s_lfeepd": 13,
+          "cs_intrpd": 15,
+          "trans_typ": 30002,
+          "liab_ldg_id": 1233
+        }
+      ]
+    },
+    "itc_elg": {
+      "itc_avl": [
+        {
+          "ty": "IMPG",
+          "camt": 274,
+          "iamt": 136.53,
+          "samt": 162.99,
+          "csamt": 103
+        },
+        {
+          "ty": "IMPS",
+          "camt": 274,
+          "iamt": 136.53,
+          "samt": 162.99,
+          "csamt": 103
+        },
+        {
+          "ty": "ISRC",
+          "camt": 274,
+          "iamt": 136.53,
+          "samt": 162.99,
+          "csamt": 103
+        },
+        {
+          "ty": "ISD",
+          "camt": 274,
+          "iamt": 136.53,
+          "samt": 162.99,
+          "csamt": 103
+        },
+        {
+          "ty": "OTH",
+          "camt": 274,
+          "iamt": 136.53,
+          "samt": 162.99,
+          "csamt": 103
+        }
+      ],
+      "itc_net": {
+        "camt": 274,
+        "iamt": 136.53,
+        "samt": 162.99,
+        "csamt": 103
+      },
+      "itc_rev": [
+        {
+          "ty": "RUL",
+          "camt": 274,
+          "iamt": 136.53,
+          "samt": 162.99,
+          "csamt": 103
+        },
+        {
+          "ty": "OTH",
+          "camt": 274,
+          "iamt": 136.53,
+          "samt": 162.99,
+          "csamt": 103
+        }
+      ],
+      " itc_inelg": [
+        {
+          "ty": "RUL",
+          "camt": 274,
+          "iamt": 136.53,
+          "samt": 162.99,
+          "csamt": 103
+        },
+        {
+          "ty": "OTH",
+          "camt": 274,
+          "iamt": 136.53,
+          "samt": 162.99,
+          "csamt": 103
+        }
+      ]
+    },
+    "inter_sup": {
+      "uin_details": [
+        {
+          "pos": "07",
+          "iamt": 200,
+          "txval": 250
+        },
+        {
+          "pos": "07",
+          "iamt": 200,
+          "txval": 250
+        },
+        {
+          "pos": "07",
+          "iamt": 200,
+          "txval": 250
+        }
+      ],
+      "comp_details": [
+        {
+          "pos": "07",
+          "iamt": 200,
+          "txval": 250
+        },
+        {
+          "pos": "07",
+          "iamt": 200,
+          "txval": 250
+        },
+        {
+          "pos": "07",
+          "iamt": 200,
+          "txval": 250
+        }
+      ],
+      "unreg_details": [
+        {
+          "pos": "07",
+          "iamt": 200,
+          "txval": 250
+        },
+        {
+          "pos": "07",
+          "iamt": 200,
+          "txval": 250
+        },
+        {
+          "pos": "07",
+          "iamt": 200,
+          "txval": 250
+        }
+      ]
+    },
+    "intr_ltfee": {
+      "intr_details": {
+        "camt": 20,
+        "iamt": 10,
+        "samt": 30,
+        "csamt": 40
+      },
+      "ltfee_details": {
+        "camt": 50,
+        "samt": 60
+      }
+    },
+    "inward_sup": {
+      "isup_details": [
+        {
+          "ty": "GST",
+          "inter": 100,
+          "intra": 200
+        },
+        {
+          "ty": "NONGST",
+          "inter": 300,
+          "intra": 400
+        }
+      ]
+    },
+    "ret_period": "072016",
+    "sup_details": {
+      "isup_rev": {
+        "camt": 200,
+        "iamt": 100,
+        "samt": 300,
+        "csamt": 400,
+        "txval": 250
+      },
+      "osup_det": {
+        "camt": 200,
+        "iamt": 100,
+        "samt": 300,
+        "csamt": 400,
+        "txval": 250
+      },
+      "osup_zero": {
+        "iamt": 100,
+        "csamt": 400,
+        "txval": 250
+      },
+      "osup_nongst": {
+        "txval": 250
+      },
+      "osup_nil_exmp": {
+        "txval": 250
+      }
+    }
+  },
+  "FIType": "GST_GSTR3B",
+  "version": "1.0",
+  "retPeriod": "052019",
+  "sectionType": "RETSUM",
+  "isLargeDataSet": true
+}

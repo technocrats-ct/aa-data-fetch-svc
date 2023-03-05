@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Account linkedAccRef="6175236a-33b6-4987-8d09-81dd1fbb566c" maskedAccNumber="XXXXXXXXX1012"
+         xmlns="http://api.rebit.org.in/FISchema/deposit" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://api.rebit.org.in/FISchema/deposit ../FISchema/deposit.xsd" type="deposit"
+         version="1.1">
+    <Profile>
+        <Holders type="SINGLE">
+            <Holder address="28/100, 8th Cross, old mumbai, Mumbai - 400702" ckycCompliance="true" dob="1979-08-15"
+                    email="ravim33@gmail.com" landline="" mobile="8578983711" name="Ravi Murthy" nominee="REGISTERED"
+                    pan="CCTPF0012R"/>
+        </Holders>
+    </Profile>
+    <Summary currentBalance="132518.97" currency="INR" branch="old mumbai" balanceDateTime="2023-02-28T05:49:31+00:00"
+             currentODLimit="300000" drawingLimit="0" exchgeRate=" " facility="CC" ifscCode="HDFC0001210"
+             micrCode="411240026" openingDate="2014-08-06" status="ACTIVE" type="CURRENT">
+        <Pending transactionType="DEBIT" amount="0"/>
+    </Summary>
+    <Transactions startDate="2018-12-06" endDate="2020-07-03">
+        <Transaction amount="50000.00" currentBalance="81916.5" mode="FT" narration="BIL/INFT/001892335260/ "
+                     reference="RFN00447593" transactionTimestamp="2020-01-09T01:31:17+00:00" txnId="M14781476"
+                     type="CREDIT" valueDate="2020-01-09"/>
+        <Transaction amount="30000.00" currentBalance="51916.5" mode="FT" narration="ACH/HDFCLTD/245261499 "
+                     reference="RFN00459999" transactionTimestamp="2020-01-10T02:41:17+00:00" txnId="M15110697"
+                     type="DEBIT" valueDate="2020-01-10"/>
+        <Transaction amount="150000.00" currentBalance="200391.32" mode="FT"
+                     narration="SAL FINTECH PRODUCTS and SOLUTIONS DEC 2019" reference="RFN00509623"
+                     transactionTimestamp="2020-01-11T18:55:16+00:00" txnId="M16427581" type="CREDIT"
+                     valueDate="2020-01-12"/>
+        <Transaction amount="50000.00" currentBalance="150391.32" mode="FT" narration="BIL/INFT/001894593460/ "
+                     reference="RFN00522029" transactionTimestamp="2020-01-11T19:03:36+00:00" txnId="M16756802"
+                     type="DEBIT" valueDate="2020-01-12"/>
+        <Transaction amount="24827.00" currentBalance="98564.32" mode="FT"
+                     narration="MMT/IMPS/001212834904/HDFC CC PMT/HDFC CREDI/HDFC0" reference="RFN00571653"
+                     transactionTimestamp="2020-01-11T19:56:54+00:00" txnId="M18073686" type="DEBIT"
+                     valueDate="2020-01-12"/>
+        <Transaction amount="150000.00" currentBalance="167272.29" mode="FT"
+                     narration="SAL FINTECH PRODUCTS and SOLUTIONS JAN 2020" reference="RFN01080299"
+                     transactionTimestamp="2020-02-08T10:39:24+00:00" txnId="M31571747" type="CREDIT"
+                     valueDate="2020-02-08"/>
+        <Transaction amount="30000.00" currentBalance="91058.29" mode="FT" narration="ACH/HDFCLTD/247295911 "
+                     reference="RFN01191953" transactionTimestamp="2020-02-09T19:32:09+00:00" txnId="M34534736"
+                     type="DEBIT" valueDate="2020-02-10"/>
+        <Transaction amount="20000.71" currentBalance="67005.58" mode="FT"
+                     narration="BIL/ONL/001922566340/NPS Trust/XBCMFNPS_RICI85/NPS" reference="RFN01253983"
+                     transactionTimestamp="2020-02-16T00:47:36+00:00" txnId="M36180841" type="DEBIT"
+                     valueDate="2020-02-16"/>
+        <Transaction amount="100000.00" currentBalance="136797.48000000001" mode="FT"
+                     narration="SAL FINTECH PRODUCTS and SOLUTIONS MAR 2020" reference="RFN01564133"
+                     transactionTimestamp="2020-03-04T03:47:46+00:00" txnId="M44411366" type="CREDIT"
+                     valueDate="2020-03-04"/>
+        <Transaction amount="50000.00" currentBalance="120115.22" mode="FT"
+                     narration="MMT/IMPS/006712781113/TRANSFER TO SEL/AKSHAY KU/C" reference="RFN01675787"
+                     transactionTimestamp="2020-03-07T10:19:21+00:00" txnId="M47374355" type="CREDIT"
+                     valueDate="2020-03-07"/>
+        <Transaction amount="30000.00" currentBalance="64586.12" mode="FT" narration="ACH/HDFCLTD/249354424 "
+                     reference="RFN01787441" transactionTimestamp="2020-03-14T04:54:18+00:00" txnId="M50337344"
+                     type="DEBIT" valueDate="2020-03-14"/>
+        <Transaction amount="39104.24" currentBalance="92950.36" mode="FT"
+                     narration="NEFT-SBIN420076198612-PRINCIPAL MUTUAL FUND-/ATTN//INB-" reference="RFN01837065"
+                     transactionTimestamp="2020-03-18T02:45:48+00:00" txnId="M51654228" type="CREDIT"
+                     valueDate="2020-03-18"/>
+        <Transaction amount="33070.22" currentBalance="126020.58" mode="FT"
+                     narration="NEFT-CITIN20042002999-MOTILAL OSWAL MLTICP 35FUND RED A" reference="RFN01849471"
+                     transactionTimestamp="2020-03-19T10:03:57+00:00" txnId="M51983449" type="CREDIT"
+                     valueDate="2020-03-19"/>
+        <Transaction amount="62438.37" currentBalance="187942.95" mode="FT"
+                     narration="NEFT-SBIN220079143128-PRINCIPAL MUTUAL FUND-/ATTN//INB-" reference="RFN01874283"
+                     transactionTimestamp="2020-03-19T10:56:55+00:00" txnId="M52641891" type="CREDIT"
+                     valueDate="2020-03-19"/>
+        <Transaction amount="106982.95" currentBalance="294925.90000000002" mode="FT"
+                     narration="NEFT-CITIN20043807506-MTL OSWL NASDQ 100 FUND OF FUND R" reference="RFN01886689"
+                     transactionTimestamp="2020-03-19T11:09:11+00:00" txnId="M52971112" type="CREDIT"
+                     valueDate="2020-03-19"/>
+        <Transaction amount="150000.00" currentBalance="144925.9" mode="FT"
+                     narration="SAL FINTECH PRODUCTS and SOLUTIONS FEB 2020" reference="RFN01899095"
+                     transactionTimestamp="2020-03-21T05:45:33+00:00" txnId="M53300333" type="DEBIT"
+                     valueDate="2020-03-21"/>
+        <Transaction amount="100000.00" currentBalance="140068.47" mode="FT"
+                     narration="SAL FINTECH PRODUCTS and SOLUTIONS MAR 2020" reference="RFN02209245"
+                     transactionTimestamp="2020-04-09T17:39:17+00:00" txnId="M61530858" type="CREDIT"
+                     valueDate="2020-04-09"/>
+        <Transaction amount="30000.00" currentBalance="69343.47" mode="FT" narration="ACH/HDFCLTD/251443203 "
+                     reference="RFN02308493" transactionTimestamp="2020-04-25T11:45:18+00:00" txnId="M64164626"
+                     type="DEBIT" valueDate="2020-04-25"/>
+        <Transaction amount="150000.00" currentBalance="159243.42000000001" mode="FT"
+                     narration="SAL FINTECH PRODUCTS and SOLUTIONS APR 2020" reference="RFN02482177"
+                     transactionTimestamp="2020-05-07T06:38:19+00:00" txnId="M68773720" type="CREDIT"
+                     valueDate="2020-05-07"/>
+        <Transaction amount="30000.00" currentBalance="70600.42" mode="FT" narration="ACH/HDFCLTD/253928436 "
+                     reference="RFN02606237" transactionTimestamp="2020-05-19T13:55:32+00:00" txnId="M72065930"
+                     type="DEBIT" valueDate="2020-05-19"/>
+        <Transaction amount="100000.00" currentBalance="141851.87" mode="FT"
+                     narration="SAL FINTECH PRODUCTS and SOLUTIONS MAY 2020" reference="RFN02804733"
+                     transactionTimestamp="2020-06-08T13:05:14+00:00" txnId="M77333466" type="CREDIT"
+                     valueDate="2020-06-08"/>
+        <Transaction amount="30000.00" currentBalance="100789.87" mode="FT" narration="ACH/HDFCLTD/256070866 "
+                     reference="RFN02854357" transactionTimestamp="2020-06-11T03:41:45+00:00" txnId="M78650350"
+                     type="DEBIT" valueDate="2020-06-11"/>
+    </Transactions>
+</Account>

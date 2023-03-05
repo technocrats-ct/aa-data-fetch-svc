@@ -1,10 +1,11 @@
 package com.technocrats.fidata.services.rules;
 
 import com.technocrats.fidata.data.FiDataRequestDetails;
+import com.technocrats.fidata.data.FiFetchDetails;
 
-public interface IProcessFiDataRequest {
+public interface IProcessFiFetch {
 
     Integer getExecutionSeq();
 
-    boolean chain(FiDataRequestDetails fiDataRequestDetails);
+    boolean chain(FiFetchDetails fiFetchDetails);
 }

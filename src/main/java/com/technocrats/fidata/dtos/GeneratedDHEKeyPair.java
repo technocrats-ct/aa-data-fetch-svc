@@ -8,12 +8,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ConsentDetailDTO {
+public class GeneratedDHEKeyPair {
 
-    @JsonProperty(value = "Consent")
-    private Consent Consent;
+    @JsonProperty(value = "KeyMaterial")
+    private KeyMaterial KeyMaterial;
 
-    @JsonProperty(value = "FIDataRange")
-    private FIDataRangeDTO FIDataRangeDTO;
+    private ErrorInfo errorInfo;
+
+    private String privateKey;
 
 }

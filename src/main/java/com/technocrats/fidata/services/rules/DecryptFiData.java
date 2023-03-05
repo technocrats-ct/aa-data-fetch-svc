@@ -1,15 +1,10 @@
 package com.technocrats.fidata.services.rules;
 
-import com.technocrats.fidata.dtos.FetchedFIData;
-import com.technocrats.fidata.dtos.FiDataFetchResponse;
-import com.technocrats.fidata.dtos.aa.FIData;
-import com.technocrats.fidata.dtos.aa.FetchedDataDto;
-import com.technocrats.fidata.dtos.aa.FiDataList;
-import com.technocrats.fidata.dtos.dhe.DecryptReqBody;
-import com.technocrats.fidata.dtos.dhe.DecryptRespBody;
-import com.technocrats.fidata.dtos.dhe.ErrorInfo;
-import com.technocrats.fidata.dtos.dhe.KeyMaterialWithNonce;
+import com.technocrats.fidata.data.FiFetchDetails;
+import com.technocrats.fidata.dtos.*;
+import com.technocrats.fidata.data.FiDataRequestDetails;
 import com.technocrats.fidata.services.DHEncSvc;
+import com.technocrats.fidata.services.rules.IProcessFiDataRequest;
 import com.technocrats.fidata.utils.EncodeDecodeUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -21,27 +16,29 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 @Slf4j
-public class DecryptFiData implements IProcessFiDataRequest {
+public class DecryptFiData implements IProcessFiFetch {
+
     private final DHEncSvc dhEncSvc;
 
     @Override
     public Integer getExecutionSeq() {
-        return 4;
+        return 3;
     }
 
     @Override
-    public boolean chain(FiDataFetchResponse fiDataFetchResponse) {
+    public boolean chain(FiFetchDetails fiFetchDetails) {
         try {
-            FetchedDataDto fiData = fiDataFetchResponse.getFetchedFIData();
-            KeyMaterialWithNonce localKeyMaterialWithNonce = fiDataFetchResponse.getLocalKeyMaterialWithNonce();
+            FiFetchRespBody fiData = fiFetchDetails.getFiFetchRespBody();
+            FiDataRequestDetails fiDataRequestDetails = fiFetchDetails.getFiDataRequestDetails();
+            KeyMaterialWithNonce localKeyMaterialWithNonce = fiDataRequestDetails.getLocalKeyMaterialWithNonce();
             String localNonce = localKeyMaterialWithNonce.getNonce();
-            String localPrivateKey = fiDataFetchResponse.getLocalPrivateKey();
-            for (FiDataList fiDataList : fiData.getFI()) {
-                KeyMaterialWithNonce remoteKeyMaterialWithNonce = fiDataList.getKeyMaterial();
-                List<FIData> dataList = fiDataList.getData();
+            String localPrivateKey = fiDataRequestDetails.getLocalPrivateKey();
+            for (FI FI : fiData.getFI()) {
+                KeyMaterialWithNonce remoteKeyMaterialWithNonce = FI.getKeyMaterial();
+                List<FIData> dataList = FI.getData();
+                String remoteNonce = remoteKeyMaterialWithNonce.getNonce();
                 for (FIData data : dataList) {
                     String encryptedData = data.getEncryptedFI();
-                    String remoteNonce = remoteKeyMaterialWithNonce.getNonce();
                     DecryptReqBody reqBody = new DecryptReqBody(encryptedData, remoteNonce, localNonce, localPrivateKey, remoteKeyMaterialWithNonce);
                     DecryptRespBody decryptRespBody = dhEncSvc.decryptData(reqBody);
                     data.setDecryptedFI(EncodeDecodeUtils.base64Decode(decryptRespBody.getBase64Data()));
@@ -52,7 +49,7 @@ public class DecryptFiData implements IProcessFiDataRequest {
         } catch (Exception ex) {
             String errorMessage = String.format("Error in Decrypting the Fi Data: %s", ex.getMessage());
             log.error(errorMessage);
-            fiDataFetchResponse.setErrorInfo(new ErrorInfo("1", errorMessage));
+            fiFetchDetails.setErrorInfo(new ErrorInfo("1", errorMessage));
             return false;
         }
     }

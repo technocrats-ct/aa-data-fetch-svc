@@ -1,4 +1,4 @@
-package com.technocrats.fidata.dtos.dhe;
+package com.technocrats.fidata.dtos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;

@@ -1,17 +1,14 @@
 package com.technocrats.fidata.services;
 
-import com.technocrats.fidata.constants.AaConstants;
-import com.technocrats.fidata.dtos.aa.AAFiDataReqDto;
-import com.technocrats.fidata.dtos.aa.AAFiDataRespDto;
-import com.technocrats.fidata.dtos.aa.FetchedDataDto;
+import com.technocrats.fidata.dtos.FiDataReqBody;
+import com.technocrats.fidata.dtos.FiDataRespBody;
+import com.technocrats.fidata.dtos.FiFetchRespBody;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
-import static com.technocrats.fidata.constants.AaConstants.AA_HEART_BEAT_URI;
-import static com.technocrats.fidata.constants.AaConstants.AA_FI_DATA_FETCH_REQ;
-import static com.technocrats.fidata.constants.AaConstants.AA_FI_DATA_FETCH_FOR_SESSION;
+import static com.technocrats.fidata.constants.AaConstants.*;
 
 @Service
 @RequiredArgsConstructor
@@ -20,31 +17,30 @@ public class AaSvc {
     private final WebClient webClientAA;
 
     public String checkHeartBeat() {
-        String heartbeat = webClientAA.get()
+        return webClientAA.get()
                 .uri(AA_HEART_BEAT_URI)
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
-        return heartbeat;
     }
 
-    public AAFiDataRespDto sendDataFetchReq(AAFiDataReqDto AAFiDataReqDto) {
+    public FiDataRespBody sendDataFetchReq(FiDataReqBody FiDataReqBody) {
         return webClientAA
                 .post()
-                .uri(AA_FI_DATA_FETCH_REQ)
-                .body(Mono.just(AAFiDataReqDto), AAFiDataReqDto.class)
+                .uri(AA_FI_DATA_FETCH_REQ_URI)
+                .body(Mono.just(FiDataReqBody), FiDataReqBody.class)
                 .retrieve()
-                .bodyToMono(AAFiDataRespDto.class)
+                .bodyToMono(FiDataRespBody.class)
                 .block();
     }
 
-    public FetchedDataDto fetchDataForSession(String sessionId) {
+    public FiFetchRespBody fetchDataForSession(String sessionId) {
         return webClientAA.get()
-                .uri(AA_FI_DATA_FETCH_FOR_SESSION + "/" + sessionId)
+                .uri(AA_FI_DATA_FETCH_FOR_SESSION_URI + "/" + sessionId)
                 .retrieve()
-                .bodyToMono(FetchedDataDto.class)
+                .bodyToMono(FiFetchRespBody.class)
                 .block();
     }
-
-
 }
+
+

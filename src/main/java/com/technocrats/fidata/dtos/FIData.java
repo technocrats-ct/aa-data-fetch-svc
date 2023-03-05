@@ -1,4 +1,4 @@
-package com.technocrats.fidata.dtos.aa;
+package com.technocrats.fidata.dtos;
 
 
 import lombok.AllArgsConstructor;

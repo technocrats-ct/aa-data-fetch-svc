@@ -1,10 +1,7 @@
-package com.technocrats.fidata.dtos.aa;
+package com.technocrats.fidata.dtos;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.technocrats.fidata.dtos.Consent;
-import com.technocrats.fidata.dtos.FIDataRangeDTO;
-import com.technocrats.fidata.dtos.dhe.KeyMaterialWithNonce;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,7 +11,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AAFiDataReqDto {
+public class FiDataReqBody {
 
     private String ver;
 
@@ -24,7 +21,7 @@ public class AAFiDataReqDto {
     private String txnid;
 
     @JsonProperty(value = "FIDataRange")
-    private FIDataRangeDTO FIDataRangeDTO;
+    private FIDataRange FIDataRange;
 
     @JsonProperty(value = "Consent")
     private Consent Consent;
