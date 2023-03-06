@@ -19,17 +19,17 @@ public class FIController {
     private final FIService fiService;
 
     @PostMapping(value = "/FiData/ConsentDetail")
-    public ResponseEntity<Void> sendDataFetchRequest(@RequestBody ConsentArtifact consentDetail) {
+    public ConsentArtifact sendDataFetchRequest(@RequestBody ConsentArtifact consentDetail) {
         log.info("Consent Artifact Received: {}", consentDetail);
         fiService.sendDataFetchRequest(consentDetail);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return consentDetail;
     }
 
     @PostMapping(value = "/FiData/FetchData")
-    public ResponseEntity<Void> fetchFiData(@RequestBody FINotificationReq fiNotificationReq) {
+    public FINotificationReq fetchFiData(@RequestBody FINotificationReq fiNotificationReq) {
         log.info("FI Notification received: {}", fiNotificationReq);
         fiService.fetchFiData(fiNotificationReq.getFIStatusNotification());
-        return new ResponseEntity<>(HttpStatus.OK);
+        return fiNotificationReq;
     }
 
 
